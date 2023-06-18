@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload Files</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="left-section">
+        <h1 class="header">File Upload</h1>
+        <div>
+          <div>
+            <label for="passwordInput" class="label-text">Enter Password to Encrypt Files</label>
+            <input class="textbox" type="password" id="passwordInput" required />
+          </div>
+          <div class="separator"></div>
+          <div class="custom-file-upload">
+            <label class="label-text">Upload File</label>
+            <input type="file" id="fileInput" required />
+            <input class="textbox" type="text" id="fileNameInput" onclick="fileInput.click()" readonly />
+          </div>
+          <div class="flex-row">
+            <button class="btn" onclick="fileInput.click()">Browse</label>
+              <button class="btn upload-btn" id="uploadButton">Upload</button>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <h3>Progress</h3>
+        <div class="separator-dark"></div>
+        <div class="grid-wrapper">
+          <div class="grid-container-header">
+            <div class="grid-item">DATE</div>
+            <div class="grid-item">NAME</div>
+            <div class="grid-item">PROGRESS</div>
+          </div>
+          <div id="uploadedFiles"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="file-upload.js"></script>
+<script src="file-upload-processor.js"></script>
+<script src="init.js"></script>
+
+</html>
